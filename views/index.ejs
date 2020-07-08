@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--ejs的模板引擎总有一种怪怪的感觉-->
+    <!--
+        <%= title%>    将title数据输出到页面中
+    -->
+    <h2> <%=title%> <%=username%> </h2>
+    <!--
+        ejs的循环渲染
+    -->
+    <ul>
+        <%for(var i=0;i<list.length;i++){%>
+            <li><%= list[i] %></li>
+        <%}%>
+    </ul>
+    <!--
+        原文输出标签
+        <%- %>
+    -->
+    <%- content%>
+    <h1>条件判断</h1>
+
+    <%if(age>10){%>
+        大于10
+    <%}%>
+
+</body>
+</html>
